@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar {
+    width: 100%;
+    height: 0vh;
+    margin-bottom: 0px;
+    position: fixed;
+    display: flex;
+    height: 6em;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: space-around;
+    z-index: 8;
+
+
+}
+
+/* ---------------- Navbar and burger menu ------------------ */
+.mobile-nav {
+    position: fixed;
+
+    height: 5em;
+
+
+    justify-content: flex-start;
+    padding: 1em;
+    align-items: center;
+    z-index: 3;
+}
+
+
+
+.burger-menu {
+    display: none;
+}
+
+.burger-bar {
+    width: 2em;
+    height: 0.25em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.5em;
+}
+
+.menu {
+    width: 20%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+
+    .navbar-mobile-menu {
+        display: flex;
+        width: 100%;
+        height: 80vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+
+        li {
+
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .nav-listing-mobile {
+                text-align: center;
+                font-weight: 400;
+                font-style: normal;
+                text-transform: none;
+                letter-spacing: 0.05em;
+                font-family: helvetica-w01-roman, helvetica-w02-roman, helvetica-lt-w10-roman, sans-serif;
+                font-size: 25px;
+                color: #FFFFFF;
+                text-decoration: none;
+                cursor: pointer;
+                transition: 1s;
+
+            }
+
+            .nav-listing-mobile:hover {
+                color: rgb(246, 228, 92);
+            }
+
+
+        }
+    }
+
+
+
+
+}
+
+/* ------------- sliding menu ------------------ */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: inherit;
+}
+
+/* ----- animations--------- */
+/* clicked */
+.burger-bar.clicked:nth-child(1) {
+    transform: rotate(45deg) translate(0.75em, 1.25em);
+    transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2) {
+    transform: rotate(135deg) translate(-0.5em, 1em);
+    transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+    transform: rotate(180deg) translate(-0.5em, 1em);
+    transition: ease-out 0.5s;
+}
+
+/* unclicked */
+.burger-bar.unclicked {
+    transform: rotate(0) translate(0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+
+.nav-logo {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        display: flex;
+        width: 100px;
+
+    }
+}
+
+.navbar-menu {
+
+    display: flex;
+    width: 25%;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+
+
+    ul {
+        display: flex;
+        gap: 20px;
+        justify-content: space-around;
+
+
+        li {
+            display: flex;
+            gap: 50px;
+            list-style: none;
+
+            .nav-listing {
+                text-align: center;
+                font-weight: 400;
+                font-style: normal;
+                text-transform: none;
+                letter-spacing: 0.05em;
+                font-family: helvetica-w01-roman, helvetica-w02-roman, helvetica-lt-w10-roman, sans-serif;
+                font-size: 15px;
+                color: #FFFFFF;
+                text-decoration: none;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            .nav-listing:hover {
+                color: rgb(246, 228, 92);
+            }
+        }
+    }
+}
+
+.nav-login {
+    display: flex;
+
+    justify-content: space-evenly;
+
+    .nav-logining {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+
+        i {
+            font-size: 20px;
+            color: gray;
+        }
+    }
+}
+
+.nav-shop-basket {
+    width: 7%;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-start;
+    color: gray;
+    cursor: pointer;
+
+}
+
+.eppek-logo {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.nav-login-basket {
+    display: flex;
+    width: 25%;
+    justify-content: flex-start;
+    gap: 20px;
+
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+
+    .navbar {
+        width: 100%;
+        height: 0vh;
+        margin-bottom: 100px;
+        position: fixed;
+        display: flex;
+        width: 100%;
+        height: 5em;
+        background-color: rgb(0, 0, 0);
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    /* ---------------- Navbar and burger menu ------------------ */
+    .mobile-nav {
+        position: fixed;
+        justify-content: flex-start;
+
+        align-items: center;
+        z-index: 9;
+    }
+
+    .burger-menu {
+        position: relative;
+        height: 79%;
+        width: 5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .burger-bar {
+        width: 2em;
+        height: 0.25em;
+        background-color: rgb(255, 255, 255);
+        border-radius: 0.5em;
+    }
+
+    .menu {
+        width: 40%;
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+        position: absolute;
+        top: 0;
+        z-index: 1;
+
+        .navbar-mobile-menu {
+            display: flex;
+            width: 100%;
+            height: 80vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+
+            li {
+
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+
+                .nav-listing-mobile {
+                    text-align: center;
+                    font-weight: 400;
+                    font-style: normal;
+                    text-transform: none;
+                    letter-spacing: 0.05em;
+                    font-family: helvetica-w01-roman, helvetica-w02-roman, helvetica-lt-w10-roman, sans-serif;
+                    font-size: 25px;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                    cursor: pointer;
+                    transition: 1s;
+
+                }
+
+                .nav-listing-mobile:hover {
+                    color: rgb(246, 228, 92);
+                }
+
+
+            }
+        }
+    }
+
+    /* ------------- sliding menu ------------------ */
+    .hidden {
+        display: none;
+    }
+
+    .visible {
+        display: inherit;
+    }
+
+    /* ----- animations--------- */
+    /* clicked */
+    .burger-bar.clicked:nth-child(1) {
+        transform: rotate(45deg) translate(0.75em, 1.25em);
+        transition: ease-out 0.5s;
+    }
+
+    .burger-bar.clicked:nth-child(2) {
+        transform: rotate(135deg) translate(-0.5em, 1em);
+        transition: ease-out 0.5s;
+    }
+
+    .burger-bar.clicked:nth-child(3) {
+        transform: rotate(180deg) translate(-0.5em, 1em);
+        transition: ease-out 0.5s;
+    }
+
+    /* unclicked */
+    .burger-bar.unclicked {
+        transform: rotate(0) translate(0);
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+    }
+
+
+    .nav-logo {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            display: flex;
+            width: 100px;
+
+        }
+    }
+
+    .navbar-menu {
+
+        display: none;
+
+        .navbar-menu {
+
+            display: flex;
+            width: 33%;
+            gap: 20px;
+
+
+            ul {
+                display: flex;
+                width: 80%;
+                justify-content: space-around;
+
+
+                li {
+                    display: flex;
+                    gap: 50px;
+                    list-style: none;
+
+                    .nav-listing {
+                        text-align: center;
+                        font-weight: 400;
+                        font-style: normal;
+                        text-transform: none;
+                        letter-spacing: 0.05em;
+                        font-family: helvetica-w01-roman, helvetica-w02-roman, helvetica-lt-w10-roman, sans-serif;
+                        font-size: 15px;
+                        color: #FFFFFF;
+                        text-decoration: none;
+                        cursor: pointer;
+                        transition: 0.3s;
+                    }
+
+                    .nav-listing:hover {
+                        color: rgb(246, 228, 92);
+                    }
+                }
+            }
+        }
+
+    }
+
+    .nav-login {
+        display: flex;
+        width: 10%;
+        justify-content: space-evenly;
+
+        .nav-logining {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+
+            i {
+                font-size: 20px;
+                color: gray;
+            }
+        }
+    }
+
+    .nav-shop-basket {
+        font-size: 20px;
+        color: gray;
+        cursor: pointer;
+
+    }
+
+    .eppek-logo {
+        width: 60%;
+        display: flex;
+        justify-content: flex-end;
+        
+
+    }
+
+    .nav-login-basket {
+        display: flex;
+        width: 40%;
+        gap: 20px;
+        justify-content: center;
+
+    }
+
+    .navbar-mobile-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+}

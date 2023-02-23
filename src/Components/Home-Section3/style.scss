@@ -1,0 +1,79 @@
+.home-section3-bg {
+    background-image: url("https://static.wixstatic.com/media/d7323f_a81977b3dd8f477e87d610727057ace2~mv2.png/v1/fill/w_1519,h_746,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/d7323f_a81977b3dd8f477e87d610727057ace2~mv2.png");
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+    scroll-behavior: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-attachment: fixed;
+    justify-content: center;
+
+    @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@400;600;700&display=swap");
+
+    $blue: #000000;
+
+
+
+
+
+
+
+    h1 {
+        background-color: rgba(255, 255, 255, 0.127);
+        font-family: "Alumni Sans", sans-serif;
+        font-size: 2.5em;
+        text-decoration: underline;
+
+        @media (max-width: 768px) {
+            font-size: 1.3em;
+        }
+    }
+
+    .text-shadow {
+        font-style: italic;
+        text-transform: uppercase;
+        color: transparent;
+        -webkit-text-stroke: #000000;
+        color: #000000;
+        -webkit-text-stroke-width: 1px;
+        text-shadow: 2px 2px 10px $blue;
+        transition: all 0.6s ease-in-out;
+        text-align: center;
+        letter-spacing: 0.2em;
+        animation: flicker 0.5s ease-in-out infinite alternate;
+
+        &:hover {
+            color: #000000;
+        }
+    }
+
+    .tags small {
+        @media (max-width: 768px) {
+            font-size: 0.5em;
+        }
+    }
+
+    @keyframes flicker {
+        0% {
+            opacity: 0.5;
+            text-shadow: 2px 2px 10px $blue;
+        }
+
+        100% {
+            opacity: 1;
+            text-shadow: 2px 2px 20px $blue;
+        }
+    }
+}
+p{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
