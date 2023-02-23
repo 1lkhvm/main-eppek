@@ -80,10 +80,17 @@ const Navbar = () => {
 
                 <div className="nav-login-basket">
                     <div className='nav-login'>
-                        <Link className='nav-logining' to={`/Login`}>
-                            <i className='fa-solid fa-circle-user'></i>
-                            Login</Link>
+                        {localStorage.getItem("username") ? 
+                        <>
+                        <span style={{ color: "white" }} className=""> {localStorage.getItem("username")}  </span> 
+                        <Link to="/logout" > Logout  </Link> 
+                        </>
+                        :
+                            <Link className='nav-logining' to={`/Login`}>
+                                <i className='fa-solid fa-circle-user'></i>
+                            </Link>}
                     </div>
+                    
                     <div className='nav-shop-basket' >
                         <i className="fa-solid fa-store" ></i>
                     </div>
